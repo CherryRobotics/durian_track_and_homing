@@ -129,6 +129,8 @@ catkin_package(
 
 ## Declare a C++ executable
 add_executable(durian_track_and_homing src/main.cpp)
+add_executable(click_target_acquisition src/click_target_acquisition.cpp)
+add_executable(range_target_acquisition src/range_target_acquisition.cpp)
 add_executable(ColorPicker src/ColorPicker.cpp)
 add_executable(simpleArDriver src/simpleArDriver.cpp)
 add_executable(simpleColorTurn src/SimpleColorTurn.cpp)
@@ -141,6 +143,8 @@ add_executable(simpleColorTurn src/SimpleColorTurn.cpp)
 target_link_libraries(durian_track_and_homing
   ${catkin_LIBRARIES}
 )
+target_link_libraries(click_target_acquisition ${catkin_LIBRARIES})
+target_link_libraries(range_target_acquisition ${catkin_LIBRARIES})
 target_link_libraries(ColorPicker
   ${catkin_LIBRARIES}
 )
